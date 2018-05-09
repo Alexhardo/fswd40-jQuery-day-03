@@ -1,0 +1,36 @@
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<style>
+li{
+ position: relative;
+}
+</style>    
+<body>
+<ul>
+<li>breakfast</li>
+<li>way to work</li>
+<li>coffee with colleagues</li>
+<li>stand meeting</li>
+<li>lunch</li>
+</ul>
+<input id="newTask" type="text" /><button onclick="addTask()">add</button>
+</ul>
+<script>
+
+var added=0;
+
+function disappear(){
+ console.log('element selected');
+ $(this).animate({left: 300},"slow").animate({opacity: 0},"slow");
+}
+ function addTask(){
+ var name=$('#newTask').val();
+  $('ul').append('<li id="'+added+'">'+name+'</li>');
+  $('#'+added).click(disappear);
+  ++added;
+ }
+
+$('li').click(disappear);
+</script>
+</body>
+</html> 
