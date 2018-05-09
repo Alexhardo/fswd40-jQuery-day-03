@@ -33,12 +33,23 @@
         border: 2px solid #006;
         border-radius: 5px;
     }
+
+    
     </style>
 </head>
 
 <body>
     <h1>jQuery Animation</h1>
     <div id="animate">ANIMATE</div>
+    <script>
+    $(document).ready(function() {
+        $("animate").animate({
+
+        }).animate(5000).animate("slow");
+
+
+    });
+    </script>
 </body>
 
 </html>
